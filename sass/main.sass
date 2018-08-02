@@ -1,0 +1,401 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+html
+	width: 100%
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+ul
+	list-style-type: none
+	margin: 0
+a
+	&:hover
+		text-decoration: none
+
+p
+	margin: 0
+
+.flex
+	display: flex
+
+// START SSAS
+
+.header
+	height: 1054px
+	background-image: url(../img/header__bg.jpg)
+	background-size: cover
+	background-position: center
+
+.logo
+	padding: $gutter
+	a
+		color: #ffffff
+		font-size: 25px
+		font-weight: bold
+		span
+			font-weight: 100
+
+.menu_top
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: 65px
+	padding-top: $gutter
+	ul
+		li
+			text-align: center
+			line-height: 65px
+			width: 150px
+			a
+				padding: 15px 20px
+				color: #ffffff
+				transition: 0.65s
+				&:hover
+					color: #ffffff
+					border: 2px solid #ffffff
+					border-radius: 50px
+					font-weight: bold
+					transition: 0.65s
+
+.header_text
+	margin: 150px auto
+	margin-bottom: 0
+	text-align: center
+	h1
+		font-size: 80px
+		font-weight: bold
+		color: #ffffff
+		text-transform: uppercase
+		span
+			color: $accent-second
+	p
+		color: #ffffff
+	button
+		padding: 30px 40px
+		margin-top: 50px
+		border-radius: 50px
+		border: none
+		color: #000000
+		background-color: #ffffa6
+		cursor: pointer
+		transition: 1s
+		text-transform: uppercase
+		font-size: 16px
+		font-weight: bold
+		&:hover
+			background-color: darken(#ffffa6, 15%)
+
+.box
+	display: flex
+	align-items: flex-end
+	height: 511px
+	.white_box
+		height: 40px
+		width: 85%
+		background-color: #ffffff
+		opacity: 0.6
+		margin: 0 auto
+
+.city_love_box
+	padding: $gutter+45px
+.img_box
+	img
+	  margin: 0 auto
+
+.city_love
+	h2
+		font-size: 60px
+		font-weight: bolder
+		color: $accent
+		span
+			color: $accent-second
+
+.destination
+	background-color: #f2fefe
+	padding: $gutter+45px
+	h2
+		font-size: 67px
+		font-weight: bolder
+		text-transform: uppercase
+		color: $accent
+		padding-bottom: 75px
+		span
+			color: $accent-second
+	p
+		font-size: 16px
+		padding-bottom: 70px
+	input
+		overflow: hidden
+		border-radius: 50px
+		padding: 10px 40px
+		font-style: italic
+		font-size: 14px
+
+	.fa-search
+		position: absolute
+		line-height: 5px
+		left: 30px
+.destination_box
+	margin-left: 100px
+
+
+.batu
+	display: flex
+	justify-content: flex-end
+	background-image: url(../img/trevel_bg.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repead
+	height: 515px
+	margin-top: $gutter
+	a
+		align-self: flex-end
+		color: #ffffff
+		padding: 10px
+	div
+		background-color: #ffffff
+		opacity: 0.929
+		padding-left: $gutter
+		img
+			padding: $gutter 0
+		h2
+			font-size: 30px
+			font-weight: 200
+			padding-bottom: $gutter
+		a
+			display: none
+			color: $accent
+
+.bromo
+	display: flex
+	justify-content: space-between
+	margin-top: $gutter
+	.brom_img_bg-1
+		display: flex
+		justify-content: space-between
+		background-image: url(../img/bromo_bg-1.png)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		padding: 0px
+		div
+			background-color: #ffffff
+			opacity: 0.929
+			padding: $gutter
+			h2
+				font-size: 30px
+				font-weight: 200
+				padding: $gutter 0
+			p
+				a
+					display: none
+					color: $accent
+		a
+			align-self: flex-end
+			color: #ffffff
+			padding: 10px
+
+	.brom_img_bg-2
+		display: flex
+		flex-direction: column
+		background-image: url(../img/bromo_bg-2.png)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		img
+			margin: auto
+			background-color: #ffffff
+			border-radius: 100%
+			padding: 20px
+		a
+			align-self: flex-end
+			color: #ffffff
+			padding: 10px
+
+
+
+// FOOTER
+
+.contact
+	padding: 85px
+	background-image: url(../img/footer-img_bg.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	color: #ffffff
+	h3
+		text-align: center
+		font-size: 67px
+
+.contact_box
+	display: flex
+	justify-content: space-around
+	margin: 20px
+	form
+		display: flex
+		flex-direction: column
+		flex: 0 0 45em
+		input, textarea
+			margin: 20px
+			padding: 30px
+			border-radius: 10px
+			&:last-child
+				background-color: #b4ec84
+				border: none
+				border-radius: 50px
+				max-width: 160px
+				text-align: center
+				padding: 20px
+				align-self: flex-end
+				color: #ffffff
+				transition: 1s
+				&:hover
+					background-color: darken(#b4ec84, 15%)
+
+	div
+		h3
+			font-size: 44px
+			font-weight: 100
+		i
+			padding-right: 10px
+				
+	span
+		align-self: center
+		text-transform: uppercase
+		font-weight: 900
+
+.subscribe
+	background-image: url(../img/subscribe_bg.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
+.subscribe
+	display: flex
+	justify-content: space-around
+	color: #ffffff
+	padding: 60px $gutter
+	h3
+		font-size: 67px
+		font-weight: bold
+	form
+		position: relative
+		align-self: center
+		input
+			position: relative
+			padding: 35px
+			width: 470px
+			border-radius: 15px
+		a
+			color: #ffffff
+		.fa-angle-right
+			position: absolute
+			top: 0px
+			right: 1px
+			font-size: 30px
+			background-color: $accent-second
+			line-height: 29px
+			padding: 35px
+			border-radius: 0 15px 15px 0
+			font-size: 50px
+			
+footer
+	display: flex
+	justify-content: space-around
+	height: 260px
+	background-image: url(../img/footer_bg.png)
+	background-size: cover
+	background-position: centter
+	background-repeat: no-repeat
+	ul
+		display: flex
+		li
+			margin: 20px
+			a
+				font-size: 30px
+				color: #5d5c5c
+				transition: 1s
+				&:hover
+					color: lighten(#5d5c5c, 50%)
+	span
+		align-self: flex-end
+.footer_text
+	padding-left: 0
+	a
+		font-size: 15px
+.footer_color
+	display: flex
+	justify-content: space-between
+	div
+		flex: 1 0 auto
+		height: 25px
+.yllow
+	background-color: #ffffa6
+.green
+	background-color: #bdf271
+.azure
+	background-color: #29d9c2
+.blue
+	background-color: #01a2a6
+.purple	
+	background-color: #2f2933
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+// END SASS
+
+@import "media" // Always at the end
++media-breakpoint-down(lg)
++media-breakpoint-down(md)
++media-breakpoint-down(sm)
+
